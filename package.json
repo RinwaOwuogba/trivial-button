@@ -1,5 +1,5 @@
 {
-  "name": "trivial-button",
+  "name": "@rinwaowuogba/trivial-button",
   "version": "1.0.0",
   "type": "module",
   "files": [
@@ -48,5 +48,8 @@
     "typescript-eslint": "^8.35.1",
     "vite": "^7.0.4",
     "vite-plugin-dts": "^4.5.4"
+  },
+  "publishConfig": {
+    "@rinwaowuogba:registry": "https://npm.pkg.github.com"
   }
 }
