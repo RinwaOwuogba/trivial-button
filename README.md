@@ -1,6 +1,6 @@
 # trivial-button
 
-A minimal React + TypeScript button component, published to NPM.
+A minimal React + TypeScript button component, published to hosted repositories e.g NPM.
 
 ## Install
 
