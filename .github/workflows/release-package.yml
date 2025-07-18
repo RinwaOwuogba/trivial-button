@@ -33,11 +33,15 @@ jobs:
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
+          scope: "@rinwaowuogba"
+          always-auth: true
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - uses: pnpm/action-setup@v4
         with:
           version: 10
       - run: pnpm install --frozen-lockfile
       - run: pnpm publish --no-git-checks
         env:
-          NPM_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}} # for pnpm
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}} # for npm
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
