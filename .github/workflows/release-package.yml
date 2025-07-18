@@ -35,11 +35,7 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: 10
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
-      - run: pnpm config set '//npm.pkg.github.com/:_authToken' "${{ secrets.AUTH_TOKEN }}"
-        env:
-          AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: pnpm config set '//npm.pkg.github.com/:_authToken' "${{ secrets.GITHUB_TOKEN }}"
       - run: pnpm publish --no-git-checks
