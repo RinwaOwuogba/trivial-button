@@ -39,4 +39,5 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm publish --no-git-checks
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NPM_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}} # for pnpm
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}} # for npm
